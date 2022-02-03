@@ -1,0 +1,43 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "heighlighted-news-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/heighlightedNews/HeighlightedNewsWebPart.js",
+          "manifest": "./src/webparts/heighlightedNews/HeighlightedNewsWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {
+    "sp-init":{
+      "path":"https://vtfk.sharepoint.com/sites/innsida/_layouts/15/init.js",
+      "globalName": "$_global_init"
+    },
+    "microsoft-ajax":{
+      "path":"https://vtfk.sharepoint.com/sites/innsida/_layouts/15/MicrosoftAjax.js",
+      "globalName": "Sys",
+      "globalDependencies": ["sp-init"]
+    },
+    "sp-runtime":{
+      "path":"https://vtfk.sharepoint.com/sites/innsida/_layouts/15/SP.Runtime.js",
+      "globalName": "SP",
+      "globalDependencies": ["microsoft-ajax"]
+    },
+    "sharepoint":{
+      "path":"https://vtfk.sharepoint.com/sites/innsida/_layouts/15/SP.js",
+      "globalName": "SP",
+      "globalDependencies": ["sp-runtime"]
+    },
+    "sp-strings":{
+      "path":"https://vtfk.sharepoint.com/sites/innsida/_layouts/15/1033/strings.js",
+      "globalName": "Strings"
+    }
+  },
+  "localizedResources": {
+    "HeighlightedNewsWebPartStrings": "lib/webparts/heighlightedNews/loc/{locale}.js",
+    "PropertyControlStrings": "node_modules/@pnp/spfx-property-controls/lib/loc/{locale}.js"
+  }
+}

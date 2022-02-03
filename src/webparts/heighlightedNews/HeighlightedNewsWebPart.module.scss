@@ -1,0 +1,274 @@
+@import '~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss';
+
+.oneCol {
+  background-color: red;
+}
+
+.index {
+  .container {
+    max-width: 700px;
+    margin: 0px auto;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    
+  }
+  .col {
+    flex-basis: 0;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+    padding: 0 5px;
+    margin-top: 0 !important;
+  }
+  .column {
+    @include ms-Grid-col;
+    @include ms-lg4;
+    @include ms-xl4;
+    @include ms-xlPush2;
+    @include ms-lgPush1;
+  }
+
+  .title {
+    @include ms-font-xl;
+    @include ms-fontColor-white;
+  }
+
+  .subTitle {
+    @include ms-font-l;
+    @include ms-fontColor-white;
+  }
+
+  .description {
+    @include ms-font-l;
+    @include ms-fontColor-white;
+  }
+  .rsImage {
+    max-width: 100%;
+  }
+  .mBot10 {
+    margin-bottom: 10px;
+  }
+  .mTop10 {
+    margin-top: 10px;
+  }
+  .button {
+    // Our button
+    text-decoration: none;
+    height: 32px;
+
+    // Primary Button
+    min-width: 80px;
+    background-color: $ms-color-themePrimary;
+    border-color: $ms-color-themePrimary;
+    color: $ms-color-white;
+
+    // Basic Button
+    outline: transparent;
+    position: relative;
+    font-family: "Segoe UI WestEuropean","Segoe UI",-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: $ms-font-size-m;
+    font-weight: $ms-font-weight-regular;
+    border-width: 0;
+    text-align: center;
+    cursor: pointer;
+    display: inline-block;
+    padding: 0 16px;
+
+    .label {
+      font-weight: $ms-font-weight-semibold;
+      font-size: $ms-font-size-m;
+      height: 32px;
+      line-height: 32px;
+      margin: 0 4px;
+      vertical-align: top;
+      display: inline-block;
+    }
+  }
+  .textMuted {
+    color:#afafaf;
+    font-size: 12px;
+  }
+.contentContainer {
+  
+  .hd {
+    font-weight: 300;
+    font-size: 16px;
+    margin: 0px 0 3px;
+  }
+  
+}
+}
+.ft12 {
+  font-size: 11px;
+}
+.linkq {
+  color: #0ea3a3;
+    font-size: 100%;
+    text-decoration: none;
+    word-break: break-all;
+}
+.spHeader {
+ // font-weight: 600;
+    font-size: 90%;
+}
+.mt1 {
+  margin-top: .25rem!important;
+}
+.mt2 {
+  margin-top: .5rem!important;
+}
+.mb1 {
+  margin-bottom: .25rem!important;
+}
+.mb2 {
+  margin-bottom: .5rem!important;
+}
+.mr3 {
+  margin-right: 1rem!important;
+}
+.media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  margin: 0;
+  .media-body {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+  }
+  .prof {
+    max-width: 38px;
+    border-radius: 50%;
+  }
+  &::not(:first-child) {
+    margin-top: 8px;
+  }
+}
+
+.ctmed {
+  padding: 0 0  7px 0;
+  border-bottom:1px solid #ebebeb;
+}
+
+.imgBigcontainer {
+  position: relative;
+  height: 240px;
+  img {
+    display: block;
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    margin-top: 0 !important;
+  }
+}
+
+.imgSMcontainer {
+  position: relative;
+  height: 112px;
+  width: 196px;
+  margin-right: 10px;
+  img {
+    display: block;
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+  }
+  .watermark {
+    width: 92% !important;
+   }
+}
+
+.index.xsConta {
+  width: 100%;
+  .col {
+    width:100%;
+    flex-basis: auto;
+  }
+  .imgBigcontainer {
+    height: 200px;
+  }
+  .imgSMcontainer {
+    width: 120px;
+    height: 80px;
+    
+  }
+}
+.index.smConta {
+  width: 100%;
+  .imgBigcontainer {
+    height: 200px;
+  }
+  .imgSMcontainer {
+    width: 109px;
+    height: 79px;
+  }
+}
+.xlConta{
+  width: 100%;
+}
+
+.mainSecBackground{
+  background: rgb(234,234,234)!important; // #ececec;
+  margin-top: 0 ! important;
+  padding: 15px 9px;
+  height: 99px;
+}
+
+.customButton{
+    float: right;
+    font-size: 16px;
+    font-weight: 400;
+    box-sizing: border-box;
+    border: 1px solid rgb(0, 82, 96);
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    padding: 0px 20px;
+    border-radius: 2px;
+    min-width: 80px;
+    height: 27px;
+    background-color: rgb(0, 82, 96);
+    color: rgb(255, 255, 255);
+    max-width: 100%;
+    vertical-align: top;
+    user-select: none;
+    margin-top: 5px;
+}
+
+.relative{
+ position: relative; 
+}
+.watermark{
+  position: absolute;
+  width: 95%;
+  background-color: rgba(0,0,0,0.12);
+  top: 0;
+  left: 0;
+  color: #fff;
+  padding: 4px 8px;
+    text-align: right;
+    font-weight: 700;
+}
